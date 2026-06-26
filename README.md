@@ -1,4 +1,4 @@
-# veganbite_restaurant
+# Veganbite Restaurant
 Responsive vegan restaurant website built with React, Bootstrap, custom CSS, and JavaScript. Includes menu, gallery slider, contact form, Google Map, and dynamic shopping cart. The project rebuilds the original restaurant website using React, Bootstrap, JavaScript, HTML, and custom CSS.
 
 ## Project Description
