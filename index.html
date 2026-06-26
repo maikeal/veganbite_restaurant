@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VeganBite React Restaurant</title>
+  <link rel="stylesheet" href="vendor/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="root">
+    <div class="app-shell" id="fallbackApp">
+      <header class="site-header">
+        <nav class="nav-wrap container">
+          <a class="logo" href="#home"><span class="brand-vegan">Vegan</span><span class="brand-bite">Bite</span></a>
+          <button class="hamburger" type="button" aria-label="Toggle navigation">☰</button>
+          <div class="nav-content">
+            <div class="nav-links">
+              <a class="nav-link active" href="#home">Home</a>
+              <a class="nav-link" href="#menu">Menu</a>
+              <a class="nav-link" href="#gallery">Gallery</a>
+              <a class="nav-link" href="#about">About</a>
+              <a class="nav-link" href="#contact">Contact</a>
+            </div>
+            <div class="header-actions">
+              <button class="cart-button" type="button">🛒 <span class="cart-label">Cart</span><span class="cart-count">0</span></button>
+              <a class="order-btn nav-order" href="#menu">Order Online</a>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero-section" id="home">
+          <div class="hero-overlay"></div>
+          <div class="container hero-content">
+            <div class="eyebrow">Plant-Based • Fresh • Feel-Good</div>
+            <div class="hero-text-box">
+              <h1>VeganBite</h1>
+              <p class="hero-description">Welcome to VeganBite, a cheerful vegan restaurant serving meat-free burgers, colorful whole-food bowls, veggie pizza, fresh rolls, tacos, and desserts made for flavor lovers.</p>
+            </div>
+            <div class="hero-buttons">
+              <a class="order-btn large-btn" href="#menu">Order Now</a>
+              <a class="ghost-btn large-btn" href="#contact">Book a Table</a>
+            </div>
+            <div class="hero-dots"><span></span><span></span><span></span></div>
+          </div>
+        </section>
+
+        <section class="section-padding">
+          <div class="container">
+            <div class="section-heading">
+              <h2 class="section-title">Why Guests Love Us</h2>
+              <p class="section-intro">We turn familiar comfort food into fresh vegan meals using vegetables, grains, beans, herbs, fruits, and plant proteins.</p>
+            </div>
+            <div class="feature-grid">
+              <article class="feature-card"><div class="feature-icon">🌱</div><h3>100% Meat-Free</h3><p>Every dish is built around plants, from jackfruit burgers to tofu bowls and dairy-free desserts.</p></article>
+              <article class="feature-card"><div class="feature-icon">🥑</div><h3>Whole-Food Flavor</h3><p>Fresh greens, rice, beans, avocado, roasted vegetables, and bright sauces keep every bite satisfying.</p></article>
+              <article class="feature-card"><div class="feature-icon">🛒</div><h3>React Shopping Cart</h3><p>Add, remove, clear, change quantities, and see the total update instantly.</p></article>
+            </div>
+          </div>
+        </section>
+
+        <section class="page-hero" id="menu">
+          <div class="container text-center">
+            <h1 class="page-title">Vegan Menu</h1>
+            <p class="page-intro">Click any food card or Add button to place it in your cart. The cart dynamically updates item names, prices, quantities, remove buttons, clear cart, and total price.</p>
+          </div>
+        </section>
+        <section class="section-padding pt-small">
+          <div class="container">
+            <div class="filter-bar">
+              <button class="filter-btn active" type="button" data-filter="All">All</button>
+              <button class="filter-btn" type="button" data-filter="Burgers">Burgers</button>
+              <button class="filter-btn" type="button" data-filter="Mains">Mains</button>
+              <button class="filter-btn" type="button" data-filter="Sides">Sides</button>
+              <button class="filter-btn" type="button" data-filter="Pizza">Pizza</button>
+              <button class="filter-btn" type="button" data-filter="Rolls">Rolls</button>
+              <button class="filter-btn" type="button" data-filter="Dessert">Dessert</button>
+              <button class="filter-btn" type="button" data-filter="Drinks">Drinks</button>
+            </div>
+            <div class="menu-grid">
+        <article class="menu-card" data-category="Burgers" data-name="Green Goddess Vegan Burger" data-price="10.99">
+          <img src="assets/menu-green-goddess-burger.png" alt="Green Goddess Vegan Burger" class="menu-img">
+          <div class="menu-card-body">
+            <h3>Green Goddess Vegan Burger</h3>
+            <p>Plant-based patty, avocado, lettuce, tomato, pickles, and basil cashew sauce.</p>
+            <div class="menu-bottom"><span class="price">$10.99</span><button class="add-btn" type="button">Add</button></div>
+          </div>
+        </article>
+        <article class="menu-card" data-category="Burgers" data-name="BBQ Jackfruit Burger" data-price="11.50">
+          <img src="assets/menu-bbq-jackfruit-burger.png" alt="BBQ Jackfruit Burger" class="menu-img">
+          <div class="menu-card-body">
+            <h3>BBQ Jackfruit Burger</h3>
+            <p>Pulled jackfruit, smoky barbecue sauce, slaw, grilled onions, and toasted bun.</p>
+            <div class="menu-bottom"><span class="price">$11.50</span><button class="add-btn" type="button">Add</button></div>
+          </div>
+        </article>
+        <article class="menu-card" data-category="Mains" data-name="Rainbow Rice & Beans Bowl" data-price="12.00">
+          <img src="assets/menu-rainbow-rice-beans-bowl.png" alt="Rainbow Rice & Beans Bowl" class="menu-img">
+          <div class="menu-card-body">
+            <h3>Rainbow Rice & Beans Bowl</h3>
+            <p>Rice, beans, avocado, salsa, greens, and a choice of jerk tofu, mushroom steak, or chickpea bites.</p>
+            <div class="menu-bottom"><span class="price">$12.00</span><button class="add-btn" type="button">Add</button></div>
+          </div>
+        </article>
+        <article class="menu-card" data-category="Mains" data-name="Coconut Curry Chickpea Bowl" data-price="11.75">
+          <img src="assets/menu-coconut-curry-chickpea-bowl.png" alt="Coconut Curry Chickpea Bowl" class="menu-img">
+          <div class="menu-card-body">
+            <h3>Coconut Curry Chickpea Bowl</h3>
+            <p>Creamy coconut curry with chickpeas, spinach, sweet potato, herbs, and steamed rice.</p>
+            <div class="menu-bottom"><span class="price">$11.75</span><button class="add-btn" type="button">Add</button></div>
+          </div>
+        </article>
+        <article class="menu-card" data-category="Pizza" data-name="Garden Veggie Pizza" data-price="13.25">
+          <img src="assets/menu-garden-veggie-pizza.png" alt="Garden Veggie Pizza" class="menu-img">
+          <div class="menu-card-body">
+            <h3>Garden Veggie Pizza</h3>
+            <p>Crisp crust with tomato sauce, vegan cheese, peppers, mushrooms, olives, and basil.</p>
+            <div class="menu-bottom"><span class="price">$13.25</span><button class="add-btn" type="button">Add</button></div>
+          </div>
+        </article>
+        <article class="menu-card" data-category="Rolls" data-name="Hummus Veggie Rolls" data-price="8.50">
+          <img src="assets/menu-hummus-veggie-rolls.png" alt="Hummus Veggie Rolls" class="menu-img">
+          <div class="menu-card-body">
+            <h3>Hummus Veggie Rolls</h3>
+            <p>Soft wraps filled with hummus, cucumber, carrots, avocado, greens, and lemon-tahini drizzle.</p>
+            <div class="menu-bottom"><span class="price">$8.50</span><button class="add-btn" type="button">Add</button></div>
+          </div>
+        </article>
+        <article class="menu-card" data-category="Sides" data-name="Cauliflower Tacos" data-price="6.95">
+          <img src="assets/menu-cauliflower-tacos.png" alt="Cauliflower Tacos" class="menu-img">
+          <div class="menu-card-body">
+            <h3>Cauliflower Tacos</h3>
+            <p>Roasted cauliflower tacos with crunchy slaw, herbs, and creamy vegan sauce in soft tortillas.</p>
+            <div class="menu-bottom"><span class="price">$6.95</span><button class="add-btn" type="button">Add</button></div>
+          </div>
+        </article>
+        <article class="menu-card" data-category="Sides" data-name="Sweet Potato Fries" data-price="5.99">
+          <img src="assets/menu-sweet-potato-fries.png" alt="Sweet Potato Fries" class="menu-img">
+          <div class="menu-card-body">
+            <h3>Sweet Potato Fries</h3>
+            <p>Crispy sweet potato fries served hot in a green box with sea salt.</p>
+            <div class="menu-bottom"><span class="price">$5.99</span><button class="add-btn" type="button">Add</button></div>
+          </div>
+        </article>
+        <article class="menu-card" data-category="Mains" data-name="Avocado Kale Power Salad" data-price="8.95">
+          <img src="assets/menu-avocado-kale-salad.png" alt="Avocado Kale Power Salad" class="menu-img">
+          <div class="menu-card-body">
+            <h3>Avocado Kale Power Salad</h3>
+            <p>A vibrant salad with kale, avocado, roasted corn, tomatoes, seeds, vinaigrette, and chickpeas.</p>
+            <div class="menu-bottom"><span class="price">$8.95</span><button class="add-btn" type="button">Add</button></div>
+          </div>
+        </article>
+        <article class="menu-card" data-category="Dessert" data-name="Mango Coconut Parfait" data-price="5.50">
+          <img src="assets/menu-mango-coconut-parfait.png" alt="Mango Coconut Parfait" class="menu-img">
+          <div class="menu-card-body">
+            <h3>Mango Coconut Parfait</h3>
+            <p>Coconut yogurt, mango purée, granola, toasted coconut, and berries.</p>
+            <div class="menu-bottom"><span class="price">$5.50</span><button class="add-btn" type="button">Add</button></div>
+          </div>
+        </article>
+        <article class="menu-card" data-category="Dessert" data-name="Chocolate Avocado Brownie" data-price="4.95">
+          <img src="assets/menu-chocolate-avocado-brownie.png" alt="Chocolate Avocado Brownie" class="menu-img">
+          <div class="menu-card-body">
+            <h3>Chocolate Avocado Brownie</h3>
+            <p>Fudgy dairy-free brownie made with cacao, avocado, and a decadent chocolate finish.</p>
+            <div class="menu-bottom"><span class="price">$4.95</span><button class="add-btn" type="button">Add</button></div>
+          </div>
+        </article>
+        <article class="menu-card" data-category="Drinks" data-name="Mint Cucumber Lemonade" data-price="3.75">
+          <img src="assets/menu-mint-cucumber-lemonade.png" alt="Mint Cucumber Lemonade" class="menu-img">
+          <div class="menu-card-body">
+            <h3>Mint Cucumber Lemonade</h3>
+            <p>Fresh lemon, cucumber, mint, agave, and sparkling water served over ice.</p>
+            <div class="menu-bottom"><span class="price">$3.75</span><button class="add-btn" type="button">Add</button></div>
+          </div>
+        </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="page-hero" id="gallery">
+          <div class="container text-center">
+            <h1 class="page-title">Gallery</h1>
+            <p class="page-intro">A six-image vegan food and restaurant gallery built as a slider with arrows, dots, and automatic movement.</p>
+          </div>
+        </section>
+        <section class="section-padding pt-small">
+          <div class="container">
+            <div class="gallery-shell">
+              <div class="gallery-track">
+        <figure class="gallery-slide">
+          <img src="assets/menu-green-goddess-burger.png" alt="Green Goddess Vegan Burger">
+          <figcaption><h3>Green Goddess Vegan Burger</h3><p>A stacked plant-based favorite with avocado and basil-cashew sauce.</p></figcaption>
+        </figure>
+        <figure class="gallery-slide">
+          <img src="assets/menu-garden-veggie-pizza.png" alt="Garden Veggie Pizza">
+          <figcaption><h3>Garden Veggie Pizza</h3><p>Vegan cheese, crisp crust, peppers, olives, mushrooms, and basil.</p></figcaption>
+        </figure>
+        <figure class="gallery-slide">
+          <img src="assets/menu-rainbow-rice-beans-bowl.png" alt="Rainbow Bowl">
+          <figcaption><h3>Rainbow Bowl</h3><p>Whole-food comfort with rice, beans, greens, salsa, and avocado.</p></figcaption>
+        </figure>
+        <figure class="gallery-slide">
+          <img src="assets/menu-cauliflower-tacos.png" alt="Cauliflower Tacos">
+          <figcaption><h3>Cauliflower Tacos</h3><p>Roasted cauliflower, crunchy slaw, herbs, and vegan sauce.</p></figcaption>
+        </figure>
+        <figure class="gallery-slide">
+          <img src="assets/menu-mango-coconut-parfait.png" alt="Mango Coconut Parfait">
+          <figcaption><h3>Mango Coconut Parfait</h3><p>A bright dairy-free dessert layered with mango, coconut, fruit, and granola.</p></figcaption>
+        </figure>
+        <figure class="gallery-slide">
+          <img src="assets/gallery-green-interior.jpg" alt="Green Dining Room">
+          <figcaption><h3>Green Dining Room</h3><p>A warm green space for friends, families, and fresh meals.</p></figcaption>
+        </figure>
+              </div>
+              <button class="slider-btn prev" type="button" aria-label="Previous image">‹</button>
+              <button class="slider-btn next" type="button" aria-label="Next image">›</button>
+            </div>
+            <div class="gallery-dots"></div>
+          </div>
+        </section>
+
+        <section class="page-hero" id="about">
+          <div class="container text-center">
+            <h1 class="page-title">About Us</h1>
+            <p class="page-intro">VeganBite is a student-built restaurant concept focused on fresh, modern, meat-free comfort food.</p>
+          </div>
+        </section>
+        <section class="section-padding pt-small">
+          <div class="container about-grid">
+            <article class="about-card about-story-card">
+              <h2>Our Story</h2>
+              <p>VeganBite began as a small weekend pop-up serving veggie burgers and fresh lemonade to neighbors who wanted food that felt good and tasted exciting. People kept asking for more options, so the team built a full menu around plants, grains, beans, fruits, herbs, and bold sauces.</p>
+              <p>Today, VeganBite is known for Green Goddess Burgers, Rainbow Rice &amp; Beans Bowls, Garden Veggie Pizza, Hummus Veggie Rolls, and dairy-free desserts. Our mission is to prove that meat-free food can be comforting, satisfying, and fun for everyone.</p>
+              <div class="stat-grid story-stats">
+                <div class="stat-box"><strong>12+</strong><span>Vegan Menu<br>Items</span></div>
+                <div class="stat-box"><strong>6</strong><span>Gallery Slides</span></div>
+                <div class="stat-box"><strong>100%</strong><span>Meat-Free</span></div>
+              </div>
+            </article>
+            <img class="about-img" src="assets/gallery-green-interior.jpg" alt="VeganBite plant-filled restaurant interior">
+          </div>
+        </section>
+
+        <section class="page-hero" id="contact">
+          <div class="container text-center">
+            <h1 class="page-title">Contact</h1>
+            <p class="page-intro">Find us on the map, send us a message, or book a table for your next plant-powered meal.</p>
+          </div>
+        </section>
+        <section class="section-padding pt-small">
+          <div class="container contact-grid">
+            <article class="contact-card">
+              <h2>Send a Message</h2>
+              <form class="contact-form">
+                <label>Name<input type="text" required placeholder="Your name"></label>
+                <label>Email<input type="email" required placeholder="you@example.com"></label>
+                <label>Message<textarea required placeholder="Write your message here"></textarea></label>
+                <button class="order-btn" type="submit">Send Message</button>
+              </form>
+              <div class="success-message" hidden>Thanks! Your message has been received.</div>
+            </article>
+            <iframe class="map-frame" title="VeganBite Google Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Times%20Square%20New%20York&output=embed"></iframe>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container footer-container">
+          <div class="footer-top">
+            <div class="footer-column footer-brand">
+              <a class="logo footer-logo" href="#home"><span class="brand-vegan">Vegan</span><span class="brand-bite">Bite</span></a>
+              <p>Plant-powered burgers, bowls, veggie pizza, rolls, desserts, smoothies, and welcoming service every day. Dine in, take out, or order online.</p>
+            </div>
+
+            <div class="footer-column footer-social">
+              <h3>Social Links</h3>
+              <div class="socials">
+                <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://www.tiktok.com" target="_blank" rel="noopener">TikTok</a>
+              </div>
+            </div>
+
+            <div class="footer-column footer-hours">
+              <h3>Business Hours</h3>
+              <ul class="hours-list">
+                <li>Mon–Thu: 10:00 AM – 9:00 PM</li>
+                <li>Fri–Sat: 10:00 AM – 10:30 PM</li>
+                <li>Sunday: 11:00 AM – 8:00 PM</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-divider"></div>
+          <div class="small-note">© 2026 VeganBite Restaurant. Student restaurant website project.</div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <div class="cart-backdrop"></div>
+  <aside class="cart-drawer" aria-label="Shopping cart">
+    <div class="cart-header"><div><h2>Shopping Cart</h2><p>Your plant-powered picks update instantly.</p></div><button class="close-btn" type="button" aria-label="Close cart">×</button></div>
+    <div class="cart-items"></div>
+    <div class="cart-footer"><div class="total-row"><span>Total</span><span class="cart-total">$0.00</span></div><button class="order-btn checkout-btn" type="button">Checkout / Book Table</button><button class="clear-btn" type="button">Clear Cart</button></div>
+  </aside>
+
+  <script src="vendor/react.production.min.js"></script>
+  <script src="vendor/react-dom.production.min.js"></script>
+  <script src="src/App.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
