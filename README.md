@@ -30,9 +30,12 @@ Users can browse vegan menu items, add items to the cart, view item quantities a
 - JavaScript
 
 ## Purpose
-The goal was to rebuild the restaurant website (https://veganbitee.netlify.app) using React and style it with a CSS framework while making the website as responsive as possible.
+The goal was to rebuild the restaurant website using React and style it with a CSS framework while making the website as responsive as possible.
 
 ## Live Website
 
 ```text
 https://veganbitte.netlify.app
+```
+## Original VeganBite Project Repo
+- https://github.com/maikeal/veganBite_Project-1
